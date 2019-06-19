@@ -1,0 +1,40 @@
+<template>
+  <div class="container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div style="background-color:#fff;margin-right: 52%;  margin-left: 10px;" >
+        <router-link to="/" class="nav-link"><img src="/images/logo.png"></router-link>
+      </div>
+      <div style="font-size: 16px;">
+        <ul class="navbar-nav" >
+          <li class="nav-item">
+            <router-link to="/" class="nav-link">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/create" class="nav-link">Create Post</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/posts" class="nav-link">Posts</router-link>
+          </li>
+        </ul>
+      </div>  
+    </nav><br />
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
+  </div>
+</template>
+
+<style>
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s
+    }
+    .fade-enter, .fade-leave-active {
+      opacity: 0
+    }
+</style>
+
+<script>
+
+    export default{
+    }
+</script>
